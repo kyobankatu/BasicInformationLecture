@@ -2,11 +2,11 @@
 標準ライブラリのみを用いて、RSA暗号のアルゴリズムを作成した。
 
 ## contents
-Main.java → mainメソッドが含まれている
-Sender.java → 送信者に見立てたクラス
-Reciever.java → 受信者に見立てたクラス
-resources/Data.txt → サンプルテキストファイル
-resources/PrimeNumber.txt → 1~10000までの素数表。桁の大きいものを消すことで高速化ができる。
+Main.java → mainメソッドが含まれている<br>
+Sender.java → 送信者に見立てたクラス<br>
+Reciever.java → 受信者に見立てたクラス<br>
+resources/Data.txt → サンプルテキストファイル<br>
+resources/PrimeNumber.txt → 1~10000までの素数表。桁の大きいものを消すことで高速化ができる。<br>
 
 ## commands
 Main.javaを動かすと、初めにScannerによる入力待ちが発生する。
