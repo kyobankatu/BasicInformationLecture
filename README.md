@@ -6,7 +6,7 @@ Main.java → mainメソッドが含まれている<br>
 Sender.java → 送信者に見立てたクラス<br>
 Reciever.java → 受信者に見立てたクラス<br>
 resources/Data.txt → サンプルテキストファイル<br>
-resources/PrimeNumber.txt → 1~10000までの素数表。桁の大きいものを消すことで高速化ができる。<br>
+resources/PrimeNumber.txt → 1~46340までの素数表。桁の大きいものを消すことで高速化ができる。<br>
 
 ## commands
 Main.javaを動かすと、初めにScannerによる入力待ちが発生する。
@@ -39,6 +39,3 @@ Main.javaを動かすと、初めにScannerによる入力待ちが発生する�
 2 ./resources/Data.txt 
 → [テキストファイル内の文字列が表示される]
 ```
-
-**注意**<br>
-③に関してはアルゴリズムの構造上非常に動作が遅いため、resources/PrimeNumber.txt内の素数の内１０００以上のものを消すことを推奨
