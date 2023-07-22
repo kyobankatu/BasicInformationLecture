@@ -1,9 +1,7 @@
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -71,11 +69,12 @@ public class Sender {
                 data.add(y);
             }
         }
+        br.close();
         reciever.recieve_file(data, d, n);
     }
 
     //一次不定方程式ax+by=1のxの解の内、0<=x<bとなるものを１つを返す
-    public static long get_d(long a, long b){
+    private static long get_d(long a, long b){
         long prevx = 1L;
         long nextx = 0L;
         long prevy = 0L;
@@ -105,10 +104,16 @@ public class Sender {
 
     //y^d % nを求める
     private long pow_mod(int y, long d, long n){
-        long ans=1;
-        for(long i=0;i<d;i++){
-            ans *= (long)y;
-            ans %= n;
+        long ans = 1;
+        long base = y;
+        while(d>=1){
+            if(d % 2 == 1){
+                ans *= base;
+                ans %= n;
+            }
+            base *= base;
+            base %= n;
+            d = d >> 1;
         }
         return ans;
     }

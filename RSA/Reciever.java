@@ -31,10 +31,16 @@ public class Reciever {
 
     //y^d % nを求める
     private long pow_mod(int y, long d, long n){
-        long ans=1;
-        for(long i=0;i<d;i++){
-            ans *= (long)y;
-            ans %= n;
+        long ans = 1;
+        long base = y;
+        while(d>=1){
+            if(d % 2 == 1){
+                ans *= base;
+                ans %= n;
+            }
+            base *= base;
+            base %= n;
+            d = d >> 1;
         }
         return ans;
     }
